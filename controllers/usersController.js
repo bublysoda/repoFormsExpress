@@ -15,8 +15,8 @@ exports.usersCreateGet = (req, res) => {
 };
 
 exports.usersCreatePost = (req, res) => {
-  const { firstName, lastName } = req.body;
-  usersStorage.addUser({ firstName, lastName });
+  const { firstName, lastName,  } = req.body;
+  usersStorage.addUser({ firstName, lastName, email, age, bio });
   res.redirect("/");
 };
 
@@ -47,7 +47,7 @@ exports.usersCreatePost = [
       });
     }
     const { firstName, lastName } = req.body;
-    usersStorage.addUser({ firstName, lastName });
+    usersStorage.addUser({ firstName, lastName, email, age, bio });
     res.redirect("/");
   }
 ];
